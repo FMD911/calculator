@@ -10,12 +10,19 @@ body {
 }
 
 #calculator {
-    width: 300px;
-    background: #222;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    transform: translateY(-5px);
+  width: 320px;
+
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(12px);
+
+  padding: 16px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 #display {
@@ -40,8 +47,13 @@ body {
   border: 1px solid #444;
   background: #333;
   color: white;
+  transition: transform 0.08s ease, background 0.2s ease;
 }
 
 #buttons button:hover {
   background: #444;
+}
+
+#buttons button:active {
+  transform: scale(0.92);
 }
