@@ -14,16 +14,12 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const value = button.textContent;
 
-   if (value === "C") {
-  if (currentInput.length > 0) {
-    currentInput = currentInput.slice(0, -1); // backspace
-  } else {
-    currentInput = ""; // full clear (already empty)
-  }
-
-  updateDisplay();
-  return;
-}
+    if (value === "C") {
+      currentInput = "";
+      isResult = false;
+      updateDisplay();
+      return;
+    }
 
     if (value === "=") {
       try {
@@ -46,10 +42,9 @@ buttons.forEach((button) => {
     const lastChar = currentInput[currentInput.length - 1];
 
     if (operators.includes(value)) {
-      if (currentInput === "") return; 
+      if (currentInput === "") return;
 
       if (operators.includes(lastChar)) {
-       
         currentInput = currentInput.slice(0, -1) + value;
         updateDisplay();
         return;
