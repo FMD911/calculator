@@ -5,13 +5,16 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
+  touch-action: manipulation;
 }
 
 #calculator {
-  width: 300px;
-  background: #222;
-  padding: 10px;
-  border-radius: 10px;
+    width: 300px;
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 #display {
