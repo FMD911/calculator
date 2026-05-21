@@ -27,3 +27,17 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+#buttons button {
+  width: 25%;
+  height: 60px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid #444;
+  background: #333;
+  color: white;
+}
+
+#buttons button:hover {
+  background: #444;
+}
